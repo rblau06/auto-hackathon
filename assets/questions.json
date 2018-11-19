@@ -1,10 +1,125 @@
 {
-    "Questions": {
-        "State": "Boston",
-        "Location" : "Fenway Park",
-        "Question": ""
-    },
-    {
-        
+    "Game": {
+        "Boston": {
+            "questions": [
+                {
+                    "question": "question goes here",
+                    "options": [
+                        "option 1"
+                    ]
+                }
+            ]
+            "q1": {
+                "id": 1,
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q2": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q3": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q4": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q5": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q6": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q7": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q8": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q9": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            },
+            "q10": {
+                "question": "question goes here",
+                "options": [
+                    "option 1",
+                    "option 2",
+                    "option 3",
+                    "option 4"
+                ],
+                "answer": "correct answer goes here",
+                "image": "images/<image-associated-with-answer>"
+            }
+        }
     }
 }
