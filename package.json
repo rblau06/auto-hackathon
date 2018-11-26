@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Rich8719/auto-hackathon#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "hbs": "^4.0.1"
   }
 }
