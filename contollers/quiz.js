@@ -1,15 +1,15 @@
 const data = require('../assets/questions.json') //get questions from json array  
 const location = 'Boston' // pull from api
-const game = data.Game.Boston
+const game = data.Game.Boston.questions
 
-// console.log(game)
+console.log(game[2].question)
 
 const QuizController = {
     getQuestion: (req,res) => {
-        // need to loop through for each new question
         let questionId = req.params.id
-        let question = game.questions[id + 1]
-        let options = game.question.options       
+        questionId --
+        let question = game[questionId].question
+        let options = game[questionId].options
 
         res.render('index', {
             question: question,

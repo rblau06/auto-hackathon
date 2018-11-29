@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 app.get('/', quizController.getQuestion)
 
-app.get('/questions/:id', quizController.getQuestion)
+app.get('/question/:id', quizController.getQuestion)
 
 app.listen(PORT, () => {
     console.log('App listening on port 4000')
