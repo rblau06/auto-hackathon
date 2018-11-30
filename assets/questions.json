@@ -10,7 +10,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id" : "0"
+                    "id" : "0",
+                    "correct" : "option 1"
                 },
                 {
                     "question": "question 2 goes here",
@@ -20,7 +21,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "1"
+                    "id": "1",
+                    "correct" : "option 2"
                 },
                 {
                     "question": "question 3 goes here",
@@ -30,7 +32,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "2"
+                    "id": "2",
+                    "correct" : "option 3"
                 },
                 {
                     "question": "question 4 goes here",
@@ -40,7 +43,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "3"
+                    "id": "3",
+                    "correct" : "option 2"
                 },
                 {
                     "question": "question 5 goes here",
@@ -50,7 +54,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "4"
+                    "id": "4",
+                    "correct" : "option 4"
                 },
                 {
                     "question": "question 6 goes here",
@@ -60,7 +65,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "5"
+                    "id": "5",
+                    "correct" : "option 2"
                 },
                 {
                     "question": "question 7 goes here",
@@ -70,7 +76,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "6"
+                    "id": "6",
+                    "correct" : "option 3"
                 },
                 {
                     "question": "question 8 goes here",
@@ -80,7 +87,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "7"
+                    "id": "7",
+                    "correct" : "option 3"
                 },
                 {
                     "question": "question 9 goes here",
@@ -90,7 +98,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "8"
+                    "id": "8",
+                    "correct" : "option 1"
                 },
                 {
                     "question": "question 10 goes here",
@@ -100,7 +109,8 @@
                         "option 3",
                         "option 4"
                     ],
-                    "id": "9"
+                    "id": "9",
+                    "correct" : "option 4"
                 }
             ]
         }

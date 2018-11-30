@@ -8,9 +8,11 @@ app.set('view engine', 'hbs')
 app.use(express.static('public'))
 app.use(bodyParser.json())
 
-app.get('/', quizController.getQuestion)
+app.get('/', quizController.launch)
 
 app.get('/question/:id', quizController.getQuestion)
+
+app.get('/answer/:grade', quizController.answer)
 
 app.listen(PORT, () => {
     console.log('App listening on port 4000')
