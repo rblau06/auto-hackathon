@@ -13,7 +13,8 @@ const QuizController = {
     },
     
     getQuestion: (req,res) => {
-        const round = game[req.params.id]
+        const id = req.params.id
+        const round = game[id]
         const question = round.question
         const options = round.options
         const correct = round.correct
@@ -21,9 +22,9 @@ const QuizController = {
         
         options.forEach((option, i) => {
             if (correct == option) {
-                optionList += `<li><a href="/answer/correct">${option}</a>`
+                optionList += `<li><a href="/answer/${id}/?userAnswer=correct">${option}</a>`
             } else {
-                optionList += `<li><a href="/answer/incorrect">${option}</a>`
+                optionList += `<li><a href="/answer/${id}/?userAnswer=incorrect">${option}</a>`
             }
         })
 
@@ -34,15 +35,21 @@ const QuizController = {
     },
     
     answer: (req, res) => {
-        const grade = req.params.grade
-        console.log(grade);
-        if (grade == 'correct') {
+        const id = req.params.id
+        const correct = game[id].correct
+        const userAnswer = req.query.userAnswer
+        let next = parseInt(id) + 1
+
+        if (userAnswer == 'correct') {
             res.render('answer', {
-                grade: grade
+                grade: 'Correct!',
+                next: next
             })
         } else {
             res.render('answer', {
-                grade: "incorrect"
+                grade: 'Incorrect',
+                next: next,
+                correct: correct
             })
         }
     }
