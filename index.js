@@ -12,7 +12,7 @@ app.get('/', quizController.launch)
 
 app.get('/question/:id', quizController.getQuestion)
 
-app.get('/answer/:id', quizController.answer)
+app.get('/answer/:grade', quizController.answer)
 
 app.listen(PORT, () => {
     console.log('App listening on port 4000')

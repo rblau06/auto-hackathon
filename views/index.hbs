@@ -1,9 +1,6 @@
 <div class = "container">
     <h1>{{question}}</h1>
     <ul>
-        {{#each options}}
-            <li><a href="/answer/{{{id}}}">{{this}}</a></li>
-        {{/each}}
-        <ul>{{optionList}}</ul>
+        {{{optionList}}}
     </ul>
 </div>

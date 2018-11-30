@@ -13,34 +13,38 @@ const QuizController = {
     },
     
     getQuestion: (req,res) => {
-        let questionId = req.params.id
-        let question = game[questionId].question
-        let options = game[questionId].options
-        let correct = game[questionId].correct
+        const round = game[req.params.id]
+        const question = round.question
+        const options = round.options
+        const correct = round.correct
         let optionList = ''
-        // console.log(correct)
         
-        options.forEach(option => {
-            optionList += `<li><a href="answer/${questionId}">${option}</a>`
+        options.forEach((option, i) => {
+            if (correct == option) {
+                optionList += `<li><a href="/answer/correct">${option}</a>`
+            } else {
+                optionList += `<li><a href="/answer/incorrect">${option}</a>`
+            }
         })
-        console.log(optionList)
 
         res.render('index', {
             question: question,
-            options: options,
-            optionList: optionList,
-            id: questionId
+            optionList: optionList
         })
     },
     
     answer: (req, res) => {
-        options.forEach((option, i) => {
-            if (correct == option) {
-                //go to answers/correct
-            } else {
-                //go to answers/incorrect
-            }
-        })
+        const grade = req.params.grade
+        console.log(grade);
+        if (grade == 'correct') {
+            res.render('answer', {
+                grade: grade
+            })
+        } else {
+            res.render('answer', {
+                grade: "incorrect"
+            })
+        }
     }
 }
 
