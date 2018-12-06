@@ -24,6 +24,7 @@ Create question answer app for one player that is based on the location of the v
 - [ ] Advertisement screens on wrong answer
 - [ ] Xperi DTA API to pull in what's listening 
 - [ ] Voice
+- [ ] Take me there button. Need to add map link to json questions
 
 ## API
 ### Query Parameters
@@ -36,8 +37,6 @@ Create question answer app for one player that is based on the location of the v
 
 ### Endpoint
 https://hackathon.abgapiservices.com/nabhackathon
-**Username:**
-**Password:**
 
 Returns json object
 
