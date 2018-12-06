@@ -8,13 +8,6 @@ Location based radio quiz app, aimed at rental car users. Built with express ser
 ## Primary Goal
 Create question answer app for one player that is based on the location of the vehicle and tallys the answer.
 
-
-## Secondary Goals
-- [ ] Mutiplayer mode (user choice, and using number of seatbelts)
-- [ ] Advertisement screens on wrong answer
-- [ ] Xperi DTA API to pull in what's listening 
-- [ ] Voice
-
 ## Todo
 ### Primary
 - [x] Render question pages
@@ -25,6 +18,12 @@ Create question answer app for one player that is based on the location of the v
 - [ ] Put Olya questions in json
 - [ ] Create controller for welcome screens
 - [ ] Art work and CSS
+
+### Secondary Goals
+- [ ] Mutiplayer mode (user choice, and using number of seatbelts)
+- [ ] Advertisement screens on wrong answer
+- [ ] Xperi DTA API to pull in what's listening 
+- [ ] Voice
 
 ## API
 ### Query Parameters
