@@ -1,13 +1,15 @@
-<div class = "container">
-    <h1>{{message}}</h1>
-    <img src="{{image}}">
-    {{#if start}}
-        <a href="{{{start}}}">Start</a>
-    {{/if}}
-    {{#if skip}}
-        <a href="{{{skip}}}">Skip</a>
-    {{/if}}
-    {{#if launch}}
-        <a href="{{{launch}}}">Launch</a>
-    {{/if}}
+<div class = "container" id="home-background">
+  <div id="home-container">
+      <h1>{{message}}</h1>
+      <img src="{{image}}" width="800px">
+      {{#if start}}
+          <a href="{{{start}}}">Start</a>
+      {{/if}}
+      {{#if skip}}
+          <a href="{{{skip}}}">Skip</a>
+      {{/if}}
+      {{#if launch}}
+          <a href="{{{launch}}}">Launch</a>
+      {{/if}}
+    </div>
 </div>

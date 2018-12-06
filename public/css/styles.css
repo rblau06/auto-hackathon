@@ -1,0 +1,61 @@
+/*LAYOUT*/
+body {
+    height: 100%;
+    margin: 0px !important;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.container {
+    min-height: 1000px;
+    max-height: 100%;
+    text-align: center;
+    padding: 5rem;
+    background-color: #007eb5;
+}
+
+#home-background.container {
+    background-image: url(/images/home-background.jpg);
+    background-size: 100%;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+#home-container {
+    text-align: center;
+    width: 50%;
+}
+
+#home-container a.button {
+    font-size: 2rem;
+    border: 3px solid #000;
+}
+
+/*TYPOGRAPHY*/
+h1, h2, h3, h4,h5, h6, a.button {
+    font-family: peachy-keen-jf, sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+/*LINKS BUTTONS*/
+
+a {
+    text-decoration: none;
+}
+
+a.button {
+    background-color: #dd0b20;
+    color: #fff;
+    padding: .5rem 1rem;
+}
+
+
