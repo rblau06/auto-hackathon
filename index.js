@@ -10,7 +10,6 @@ app.use(express.static('public'))
 // app.use(bodyParser.json())
 
 app.get('/', quizController.launch)
-app.get('/', apiAccess.launch)
 
 app.get('/question/:id', quizController.getQuestion)
 
