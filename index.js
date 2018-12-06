@@ -1,6 +1,7 @@
 const express = require('express')
 // const bodyParser = require('body-parser')
-const quizController = require('./contollers/quiz.js')
+const quizController = require('./controllers/quiz.js')
+const launchController = require('./controllers/welcome.js')
 const app = express()
 const PORT = 4000
 
@@ -8,7 +9,7 @@ app.set('view engine', 'hbs')
 app.use(express.static('public'))
 // app.use(bodyParser.json())
 
-app.get('/', quizController.launch)
+app.get('/:id?', launchController.launch)
 
 app.get('/question/:id', quizController.getQuestion)
 
