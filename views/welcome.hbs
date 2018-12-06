@@ -1,8 +1,15 @@
 <div class = "container" id="home-background">
-    <div id="home-container">
-        <img src="/images/ohThePlacesYoullKnow.png" width="800px"/><br>
-        <h1>{{welcome}}</h1>
-        <a href="{{start}}" class="button">Start</a>
-        {{!-- Could have resume button/functionality --}}
+  <div id="home-container">
+      <h1>{{message}}</h1>
+      <img src="{{image}}" width="800px">
+      {{#if start}}
+          <a href="{{{start}}}">Start</a>
+      {{/if}}
+      {{#if skip}}
+          <a href="{{{skip}}}">Skip</a>
+      {{/if}}
+      {{#if launch}}
+          <a href="{{{launch}}}">Launch</a>
+      {{/if}}
     </div>
 </div>
