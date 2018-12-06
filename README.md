@@ -19,7 +19,7 @@ Create question answer app for one player that is based on the location of the v
 ### Primary
 - [x] Render question pages
 - [x] Log correct answer and count score
-- [x] Connect API
+- [ ] Connect API
 - [ ] Gather photo Assets
 - [ ] Add photo assets dependent on question to each question/answer page
 - [ ] Put Olya questions in json
