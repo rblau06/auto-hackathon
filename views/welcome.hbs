@@ -1,5 +1,13 @@
 <div class = "container">
-    <h1>{{welcome}}</h1>
-    <a href="{{start}}">Start</a>
-    {{!-- Could have resume button/functionality --}}
+    <h1>{{message}}</h1>
+    <img src="{{image}}">
+    {{#if start}}
+        <a href="{{{start}}}">Start</a>
+    {{/if}}
+    {{#if skip}}
+        <a href="{{{skip}}}">Skip</a>
+    {{/if}}
+    {{#if launch}}
+        <a href="{{{launch}}}">Launch</a>
+    {{/if}}
 </div>

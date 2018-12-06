@@ -3,16 +3,7 @@ const location = 'Boston' // pull from api
 const game = data.Game[location].questions
 let score = 0
 
-const QuizController = {
-	launch: (req, res) => {
-		const welcome = 'Welcome'
-		const start = 'question/0'
-		res.render('welcome', {
-			welcome: welcome,
-			start: start
-		})
-	},
-	
+const QuizController = {	
 	getQuestion: (req,res) => {
 		const id = req.params.id
 		const question = game[id].question
