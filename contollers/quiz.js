@@ -1,6 +1,6 @@
 const data = require('../assets/questions.json') //get questions from json array  
 const location = 'Boston' // pull from api
-const game = data.Game.Boston.questions
+const game = data.Game[location].questions
 let score = 0
 
 const QuizController = {
@@ -15,36 +15,35 @@ const QuizController = {
 	
 	getQuestion: (req,res) => {
 		const id = req.params.id
-		const round = game[id]
-		const question = round.question
-		const options = round.options
-		const correct = round.correct
-		let optionList = ''
+		const question = game[id].question
+		const correct = game[id].correct
+		let options = game[id].options
+		let placeholder = ''			
 		
 		options.forEach((option, i) => {
 			if (correct == option) {
-				optionList += `<li><a href="/answer/${id}/?userAnswer=correct">${option}</a>`
+				placeholder += `<li><a href="/answer/${id}/?userAnswer=correct">${option}</a>`
 			} else {
-				optionList += `<li><a href="/answer/${id}/?userAnswer=incorrect">${option}</a>`
+				placeholder += `<li><a href="/answer/${id}/?userAnswer=incorrect">${option}</a>`
 			}
 		})
+		
+		options = placeholder
 
 		res.render('index', {
 			question: question,
-			optionList: optionList
+			options: options
 		})
 	},
 	
 	answer: (req, res) => {
 		const id = req.params.id
-		const round = game[id]
-		const roundNumber = parseInt(id) + 1
-		const correct = round.correct
+		const round = parseInt(id) + 1
+		const correct = game[id].correct
 		const userAnswer = req.query.userAnswer
 		let next = `/question/${parseInt(id) + 1}`
-		console.log(roundNumber, game.length)
 
-		if (roundNumber == game.length) {
+		if (round == game.length) {
 			const result = '/result'			
 			res.render('answer', {
 				grade: 'Correct!',
