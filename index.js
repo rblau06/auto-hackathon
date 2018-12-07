@@ -1,9 +1,9 @@
 const express = require('express')
 // const bodyParser = require('body-parser')
 
-const quizController = require('./contollers/quiz.js')
+const quizController = require('./controllers/quiz.js')
 const launchController = require('./controllers/welcome.js')
-const apiAccess = require('./contollers/apiaccess.js')
+const apiAccess = require('./controllers/apiaccess.js')
 
 const app = express()
 const PORT = 4000
