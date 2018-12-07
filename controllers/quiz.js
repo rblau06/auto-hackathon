@@ -1,19 +1,40 @@
 const data = require('../assets/questions.json') //get questions from json array  
 const location = 'Boston' // pull from api
 const game = data.Game[location].questions
-const time = require('../util.js')
+// const time = require('../util.js')
 let score = 0
 
 const QuizController = {	
 	getQuestion: (req,res) => {
-		const timer = time()
-		console.log(timer)
 		const id = req.params.id
 		const question = game[id].question
 		const correct = game[id].correct
 		let options = game[id].options
 		let placeholder = ''			
+
+		function redirect() {
+			res.redirect('/ad/')
+		}
 		
+		function resolveAfter2Seconds() {
+			return new Promise(resolve => {
+				setTimeout(() => {
+					resolve('resolved');
+				}, 2000);
+			});
+		}
+
+		async function asyncCall() {
+			console.log('calling');
+			var result = await resolveAfter2Seconds();
+			console.log(result);
+			res.redirect('/ad/')
+			// expected output: 'resolved'
+		}
+
+		asyncCall()
+		
+
 		options.forEach((option, i) => {
 			if (correct == option) {
 				placeholder += `<li><a href="/answer/${id}/?userAnswer=correct">${option}</a>`

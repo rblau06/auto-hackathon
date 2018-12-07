@@ -1,10 +1,10 @@
-const time = () => {
+const time = (res) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             console.log('test')
-        }, 10000);
+            res.redirect('ad')
+        }, 1000);
     })
 }
 
-// time()
 module.exports = time
