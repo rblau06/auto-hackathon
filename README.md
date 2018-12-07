@@ -1,6 +1,14 @@
 # Oh, The Places You'll Know
 ## Team Auto PILOT
 
+## End of day one to dos
+
+- [ ] Timer function
+- [ ] Back button on question pages
+- [ ] Help button on question pages
+- [ ] Styling of onboarding, having the images appear
+- [ ] Integrating Bob's data with app
+
 Location based radio quiz app, aimed at rental car users. Built with express server and handlebar templating leveraging Avis Budget's API.
 
 ## Goals
