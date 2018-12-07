@@ -33,7 +33,7 @@ const LaunchController = {
                 //welcome screen
                 message: `Welcome to ${location}`,
                 image: '/images/home-background.jpg',
-                logo: '/images/ohtheplaceyoullknow.png',
+                logo: '/images/ohThePlacesYoullKnow.png',
                 launch: skip
             }) 
         }

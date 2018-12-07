@@ -1,15 +1,15 @@
 <div class = "container" id="home-background">
   <div id="home-container">
+      <img src="{{logo}}" id="welcome-logo">
       <h1>{{message}}</h1>
-      <img src="{{image}}" width="800px">
       {{#if start}}
-          <a href="{{{start}}}">Start</a>
+          <a href="{{{start}}}" class ="button">Start</a>
       {{/if}}
       {{#if skip}}
-          <a href="{{{skip}}}">Skip</a>
+          <a href="{{{skip}}}" class="button">Skip</a>
       {{/if}}
       {{#if launch}}
-          <a href="{{{launch}}}">Launch</a>
+          <a href="{{{launch}}}" class="button">Launch</a>
       {{/if}}
     </div>
 </div>
