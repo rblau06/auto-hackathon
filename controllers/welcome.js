@@ -32,7 +32,6 @@ const LaunchController = {
             res.render('welcome', {
                 //welcome screen
                 message: `Welcome to ${location}`,
-                image: '/images/home-background.jpg',
                 logo: '/images/ohThePlacesYoullKnow.png',
                 launch: skip
             }) 

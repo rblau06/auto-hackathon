@@ -33,6 +33,10 @@ body {
     width: 800px;
 }
 
+#home-container img {
+    width: 800px;
+}
+
 #home-container a.button {
     font-size: 2rem;
     border: 3px solid #000;
