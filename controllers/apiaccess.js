@@ -22,7 +22,7 @@ request.get('https://hackathon.abgapiservices.com/nabhackathon?where=co_rental_l
             Players: []
         };
 
-        console.log(Players);
+        console.log(riders);
 
         for (a = 1; a <= seatCount; a++ ) {
             // let fullName = riders.Players.push("First Name: " + [data[a].first_name + "Last Name: " + data[a].last_name]);
@@ -36,15 +36,15 @@ request.get('https://hackathon.abgapiservices.com/nabhackathon?where=co_rental_l
         let json = JSON.stringify(riders);
         // Write output to JSON File
         let wstream = fs.createWriteStream('./assets/avisriders.json', 'utf8');
-        // for (a = 1; a <= seatCount; a++ ) {
-        //     wstream.write(json + '\n');
-        // }
+        for (a = 1; a <= seatCount; a++ ) {
+            wstream.write(json + '\n');
+        }
 
         // console.log(riders);
 
         // riders.forEach(function(element) {
         //     wstream.write(json + '\n');
         // });
-        // wstream.end();
+        wstream.end();
 
     }).auth('85df44f4d7fb477aa959a2b33aa08869', 'AfCBCEa8550246Cda59cA46a6418195f', false);
