@@ -1,10 +1,13 @@
 const data = require('../assets/questions.json') //get questions from json array  
 const location = 'Boston' // pull from api
 const game = data.Game[location].questions
+const time = require('../util.js')
 let score = 0
 
 const QuizController = {	
 	getQuestion: (req,res) => {
+		const timer = time()
+		console.log(timer)
 		const id = req.params.id
 		const question = game[id].question
 		const correct = game[id].correct
@@ -34,10 +37,18 @@ const QuizController = {
 		const userAnswer = req.query.userAnswer
 		let next = `/question/${parseInt(id) + 1}`
 
-		if (round == game.length) {
-			const result = '/result'			
+		if (round == game.length && userAnswer == 'correct') {
+			const result = '/result/'			
 			res.render('answer', {
 				grade: 'Correct!',
+				correct: correct,
+				next: result
+			})
+
+		} else if (round == game.length && userAnswer == 'incorrect') {
+			const result = '/result/'
+			res.render('answer', {
+				grade: 'Incorrect!',
 				correct: correct,
 				next: result
 			})
@@ -64,6 +75,13 @@ const QuizController = {
 			result: score,
 			numberOfQuestions: game.length,
 			restart: restart
+		})
+	},
+
+	ad: (req, res) => {
+		res.render('ad', {
+			message: 'Times up!',
+			ad: 'This ad bought to you by your incompetence'
 		})
 	}
 }
