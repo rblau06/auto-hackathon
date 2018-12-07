@@ -1,11 +1,11 @@
 const data = require('../assets/questions.json')
 const location = 'Boston'
-const start = 'question/0'
+const start = '/question/0'
 
 const LaunchController = {
     launch: (req, res) => {
         const id = req.params.id
-        let skip = `/${parseInt(id) + 1 || 1}`
+        let skip = `/start/${parseInt(id) + 1 || 1}`
         
         if (id == 1) {
             //first screem

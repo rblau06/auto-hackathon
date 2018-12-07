@@ -1,6 +1,7 @@
 const data = require('../assets/questions.json') //get questions from json array  
 const location = 'Boston' // pull from api
 const game = data.Game[location].questions
+// const time = require('../util.js')
 let score = 0
 
 const QuizController = {	
@@ -10,7 +11,30 @@ const QuizController = {
 		const correct = game[id].correct
 		let options = game[id].options
 		let placeholder = ''			
+
+		function redirect() {
+			res.redirect('/ad/')
+		}
 		
+		function resolveAfter2Seconds() {
+			return new Promise(resolve => {
+				setTimeout(() => {
+					resolve('resolved');
+				}, 2000);
+			});
+		}
+
+		async function asyncCall() {
+			console.log('calling');
+			var result = await resolveAfter2Seconds();
+			console.log(result);
+			res.redirect('/ad/')
+			// expected output: 'resolved'
+		}
+
+		asyncCall()
+		
+
 		options.forEach((option, i) => {
 			if (correct == option) {
 				placeholder += `<li><a href="/answer/${id}/?userAnswer=correct">${option}</a>`
@@ -34,10 +58,18 @@ const QuizController = {
 		const userAnswer = req.query.userAnswer
 		let next = `/question/${parseInt(id) + 1}`
 
-		if (round == game.length) {
-			const result = '/result'			
+		if (round == game.length && userAnswer == 'correct') {
+			const result = '/result/'			
 			res.render('answer', {
 				grade: 'Correct!',
+				correct: correct,
+				next: result
+			})
+
+		} else if (round == game.length && userAnswer == 'incorrect') {
+			const result = '/result/'
+			res.render('answer', {
+				grade: 'Incorrect!',
 				correct: correct,
 				next: result
 			})
@@ -64,6 +96,13 @@ const QuizController = {
 			result: score,
 			numberOfQuestions: game.length,
 			restart: restart
+		})
+	},
+
+	ad: (req, res) => {
+		res.render('ad', {
+			message: 'Times up!',
+			ad: 'This ad bought to you by your incompetence'
 		})
 	}
 }
