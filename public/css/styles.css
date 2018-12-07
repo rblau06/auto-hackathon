@@ -114,7 +114,8 @@ ul.question-options li a {
 
 ul.question-options li a:active {
     color: #dd0b20;
-    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1)
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .navigation {
@@ -180,6 +181,12 @@ a.button {
     border: 3px solid #000;
     color: #fff;
     padding: .5rem 1rem;
+}
+
+a.button:active {
+    background-color: #007eb5;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
