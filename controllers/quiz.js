@@ -70,7 +70,7 @@ const QuizController = {
 	},
 
 	result: (req, res) => {
-		const restart = 'question/0'
+		const restart = '/question/0'
 		res.render('results', {
 			result: score,
 			numberOfQuestions: game.length,

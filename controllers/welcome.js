@@ -10,28 +10,28 @@ const LaunchController = {
         if (id == 1) {
             //first screem
             res.render('welcome', {
-                message: 'You will be asked a question specific to your location',
+                message: '<h2 class="onboarding-h2">You will be asked a question specific to your location</h2>',
                 image: `/images/onboarding-location.png`,
                 skip: skip
             })
         } else if (id == 2) {
             //second screen
             res.render('welcome', {
-                message: 'You will have 15 seconds to read the question and select your answer',
+                message: '<h2 class="onboarding-h2">You will have 15 seconds to read the question and select your answer</h2>',
                 image: `/images/onboarding-clock.png`,
                 skip: skip
             }) 
         } else if (id == 3) {
             //third screen
             res.render('welcome', {
-                message: 'If you get the correct answer, you get a point!',
+                message: '<h2 class="onboarding-h2">If you get the correct answer, you get a point!</h2>',
                 image: `/images/onboarding-point.png`,
                 start: start
             })
         } else {
             res.render('welcome', {
                 //welcome screen
-                message: `Welcome to ${location}`,
+                message: `<h1>Welcome to ${location}</h1>`,
                 logo: '/images/ohThePlacesYoullKnow.png',
                 launch: skip
             }) 

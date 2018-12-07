@@ -1,13 +1,17 @@
 <div class = "container" id="home-background">
   <div id="home-container">
+      <!--oh the places you'll know image-->
       <img src="{{logo}}" width="800px">
-      <h1>{{message}}</h1>
-      <img src ="{{image}}">
+      <!--end-->
+      <!--onboarding images-->
+      <img src ="{{image}}" class="onboarding-img">
+      <!--end-->
+      {{{message}}}
       {{#if start}}
           <a href="{{{start}}}" class ="button">Start</a>
       {{/if}}
       {{#if skip}}
-          <a href="{{{skip}}}" class="button">Skip</a>
+          <a href="{{{skip}}}" class="button">Next</a>
       {{/if}}
       {{#if launch}}
           <a href="{{{launch}}}" class="button">Launch</a>
