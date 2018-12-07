@@ -153,6 +153,17 @@ p.correct-answer {
     margin: 0;
 }
 
+#results-box {
+    background-color: #fff;
+    border: 3px solid #333;
+    padding: 2rem;
+}
+
+#results-box h1 {
+    color: #dd0b20;
+    margin-top: 0;
+}
+
 /*TYPOGRAPHY*/
 h1, h2, h3, h4,h5, h6, a.button {
     font-family: peachy-keen-jf, sans-serif;
@@ -165,8 +176,14 @@ h1 {
     font-size: 5rem;
 }
 
-h1.onboarding {
-    font-size: 1rem;
+h2.onboarding-h2 {
+    font-size: 4rem;
+}
+
+#home-container img.onboarding-img {
+    float: left;
+    max-width: 1000px;
+    width: 50%;
 }
 
 
